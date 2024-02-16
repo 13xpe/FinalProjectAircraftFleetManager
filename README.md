@@ -2,7 +2,7 @@
 
 The main goal is to provide an easy and fast tool that can be helpful when making critical decisions regarding fleet operations. The application aims to streamline the entire aircraft management process, offering a comprehensive solution that empowers users to optimize resource utilization, ensure regulatory compliance, and enhance overall operational efficiency.
 
-<b>The main key functionalities of the app are:</b>
+<h2><b>The main key functionalities of the app are:</b></h2>
 
 1. User Roles and Permissions:
 Identify different user roles (e.g., administrator, pilot, maintenance personnel).
