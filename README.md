@@ -9,19 +9,19 @@ Identify different user roles (e.g., administrator, pilot, maintenance personnel
 Define permissions and access levels for each role.
 
 <h3>2. Core Features:</h3>
-Aircraft Management:
+<b>Aircraft Management:</b>
 Add, edit, and delete aircraft details.
 Track aircraft specifications, registration, and maintenance history.
 
-Flight Scheduling:
+<b>Flight Scheduling:</b>
 Create and manage flight schedules.
 Assign specific aircraft to flights.
 
-Maintenance Tracking:
+<b>Maintenance Tracking:</b>
 Record and track maintenance activities for each aircraft.
 Schedule and prioritize routine and unscheduled maintenance.
 
-Fuel Management:
+<b>Fuel Management:</b>
 Monitor fuel consumption.
 Log fueling activities and costs.
 
