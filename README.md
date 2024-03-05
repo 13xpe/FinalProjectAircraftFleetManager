@@ -11,7 +11,7 @@ The main goal is to provide an easy and fast tool that can be helpful when makin
 <br> 
 
 - If a user is not registered yet, I created an easy registration window where they input some of their info and they can login in the moment (after registeration).
-![image](https://github.com/13xpe/FinalProjectAircraftFleetManager/assets/124820216/213e8437-1bc9-4fee-aeae-edc5dc46051f)
+
 
 
 
