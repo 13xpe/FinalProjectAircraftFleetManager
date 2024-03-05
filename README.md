@@ -18,7 +18,7 @@ The main goal is to provide an easy and fast tool that can be helpful when makin
 
 - After login in, the user will pass to the dashboard. This section will allow the user to navigate across the app.
 
-
+![DashboardAir](https://github.com/13xpe/FinalProjectAircraftFleetManager/assets/124820216/d40b3cbe-0d8d-4626-b749-63e68ff0498b)
 
 <br>
 
