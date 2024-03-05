@@ -1,10 +1,10 @@
 <h1>Aircraft Fleet Manager</h1>
 
-The main goal is to provide an easy and fast tool that can be helpful when making critical decisions regarding fleet operations. The application aims to streamline the entire aircraft management process, offering a comprehensive solution that empowers users to optimize resource utilization, ensure regulatory compliance, and enhance overall operational efficiency.
+The main goal is to provide an easy and fast tool that can be helpful when making critical decisions regarding fleet operations and aircraft management. The application aims to manage and optimize the entire aircraft management process, offering a good solution that empowers users to improve resource utilization, ensure regulatory compliance, and boost overall operational efficiency.
 
 <h3><b>This README file will help explaining and show my work so far on the project</b></h3>
 
-- Login page page. This page has an important role as users need to go through it to be able to enter in the app.
+- Login page page. This page has an important role as users need to go through it to be able to enter the app.
   
 ![LoginPageFleetManagement](https://github.com/13xpe/FinalProjectAircraftFleetManager/assets/124820216/e5b80565-1066-4a37-b847-30aa95e108c8)
 
