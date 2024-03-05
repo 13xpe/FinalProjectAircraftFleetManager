@@ -16,7 +16,7 @@ The main goal is to provide an easy and fast tool that can be helpful when makin
 
 <br> 
 
-- After login in, the user will pass to the dashboard. This section will allow the user to navigate across all the app.
+- After login in, the user will pass to the dashboard. This section will allow the user to navigate across the app.
 
 ![Dashboard](https://github.com/13xpe/FinalProjectAircraftFleetManager/assets/124820216/742d4c2f-f674-4e4c-8955-0ce216a8c9e3)
 
