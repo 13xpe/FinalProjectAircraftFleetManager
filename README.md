@@ -10,7 +10,7 @@ The main goal is to provide an easy and fast tool that can be helpful when makin
 
 <br> 
 
-- If a user is not registered yet, I created an easy registration window where they input some of their info and they can login in the moment (after registeration).
+- If a user is not registered yet, there's an easy registration window where they input some of their info and they can login in the moment (after registeration).
 
 ![engineerRegistration](https://github.com/13xpe/FinalProjectAircraftFleetManager/assets/124820216/3ab31824-22f2-4b74-b766-20de0065441f)
 
