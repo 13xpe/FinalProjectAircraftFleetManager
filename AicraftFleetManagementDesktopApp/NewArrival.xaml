@@ -1,0 +1,76 @@
+﻿<Window x:Class="FinalProjectAircraftFleetManager.NewArrival"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProjectAircraftFleetManager"
+        mc:Ignorable="d"
+        Title="NewArrival" Height="400" Width="700"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="Window_MouseLeftButtonDownDashboard"
+        Background="#192841"
+        AllowsTransparency="True">
+    
+    <Grid ClipToBounds="True">
+        <TextBlock TextWrapping="Wrap" 
+            Text="Arrival Planner"
+            Foreground="White" 
+            FontSize="20" 
+            FontWeight="Bold" 
+            Margin="43,52,463,320"/>
+
+        <TextBlock TextWrapping="Wrap"
+            Text="Please, insert the correct information for the arriving aircraft."
+            Foreground="White" 
+            Margin="43,81,308,299"
+            FontSize="11"/>
+
+        <Image HorizontalAlignment="Left" 
+               Height="51" Margin="564,48,0,0" 
+               VerticalAlignment="Top" 
+               Width="90" 
+               Source="/logoBlueVersion.png"/>
+
+        <TextBox x:Name="arrivalTime" TextWrapping="Wrap" 
+                Text="Arrival time"
+                VerticalContentAlignment="Center"
+                Background="White"
+                Opacity="1" Foreground="#FF9A9A9A" 
+                Margin="251,150,249,214"
+                 GotFocus="TextBox_GotFocus1"/>
+
+        <TextBox x:Name="arrivalFlight" TextWrapping="Wrap" 
+                Text="Arrival flight"
+                VerticalContentAlignment="Center"
+                Background="white"
+                Opacity="1" Foreground="#FF9A9A9A" 
+                Margin="251,200,250,164"
+                 GotFocus="TextBox_GotFocus2"/>
+
+        <TextBox x:Name="arrivalFrom" TextWrapping="Wrap" 
+                Text="Arriving from"
+                VerticalContentAlignment="Center"
+                Background="white"
+                Opacity="1" Foreground="#FF9A9A9A" 
+                Margin="250,253,250,111"
+                 GotFocus="TextBox_GotFocus3"/>
+
+        <Button x:Name="addArrivalButton"  Content="Add arrival"
+                VerticalContentAlignment="Center"
+                Background="#FFE2E2E2"
+                Opacity="1"
+                Foreground="#192841" Margin="250,304,250,60"
+                Click="addArrivalButton_Click" Cursor="Hand"/>
+
+        <Button x:Name="buttonArrivalClose" Margin="652,0,10,377"
+                Background="#FFFF5D5D" 
+                ContentStringFormat="" 
+                Content="X" 
+                Foreground="White" 
+                BorderBrush="#FFFF5D5D"
+                Click="buttonArrivalClose_Button" Cursor="Hand"/>
+
+    </Grid>
+</Window>

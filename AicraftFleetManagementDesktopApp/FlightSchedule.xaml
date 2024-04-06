@@ -1,0 +1,188 @@
+﻿<Window x:Class="FinalProjectAircraftFleetManager.FlightSchedule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProjectAircraftFleetManager"
+        mc:Ignorable="d"
+        Title="FlightSchedule" Height="500" Width="800"
+        WindowStyle="none"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="Window_MouseLeftButtonDownDashboard"
+        Background="white"
+        AllowsTransparency="True">
+
+    <Grid ClipToBounds="True">
+        <Button x:Name="buttonCloseDash" Margin="748,0,10,475"
+        Background="#FFFF5D5D" 
+        ContentStringFormat="" 
+        Content="X" 
+        Foreground="White" 
+        BorderBrush="#FFFF5D5D"
+        Click="buttonCloseDashClick" Cursor="Hand"/>
+
+        <Button x:Name="buttonMinimizeDash" Margin="706,0,52,475"
+        Background="#192841" 
+        ContentStringFormat="" 
+        Content="-" 
+        Foreground="White" 
+        BorderBrush="#192841"
+        Click="buttonMinimizeDashClick" Cursor="Hand"/>
+
+        <Border BorderBrush="#FFC7C7C7" BorderThickness="0,0,1,0" Margin="0,0,615,0"/>
+
+        <Image Source="/aviation-removebg-preview.png" 
+       Margin="30,24,649,398"/>
+
+        <Button Content="Dashboard" 
+        Margin="30,130,649,333"
+        Background="Transparent"
+        BorderBrush="#192841"
+        Cursor="Hand"
+        Click="dashBoardButton_Click"/>
+
+        <Button Content="Aircraft Management" 
+        Margin="30,179,649,284"
+        Background="white"
+        BorderBrush="#192841"
+        Cursor="Hand"
+        Click="buttonAircraftManagSection_Click"/>
+
+        <Button Content="Flight Schedule" 
+        Margin="30,228,649,236"
+        Background="WhiteSmoke"
+        BorderBrush="#192841"
+        Cursor="Hand"/>
+
+        <Button Content="Maintenance" 
+        Margin="30,277,649,186"
+        Background="Transparent"
+        BorderBrush="#192841"
+        Cursor="Hand"
+                Click="Maintenance_Click"/>
+
+        <Button Content="Aircraft Tracker" 
+                Margin="30,326,649,137"
+                Background="Transparent"
+                BorderBrush="#192841"
+                Cursor="Hand"
+                Click="aircraftTraker_Click"/>
+
+        <Button Content="Alerts" 
+                Margin="30,376,649,87"
+                Background="Transparent"
+                BorderBrush="#192841"
+                Cursor="Hand"
+                Click="alerts_Click"/>
+
+        <Button Content="Log out"
+                Margin="66,457,685,21"
+                Background="Transparent"
+                BorderBrush="White"
+                Cursor="Hand"/>
+
+        <Rectangle HorizontalAlignment="Left" 
+                    Height="48" Margin="244,60,0,0"
+                    Fill="#A0A0A0"
+                    Stroke="#FFA0A0A0" 
+                    RadiusX="10"
+                    RadiusY="10"
+                    VerticalAlignment="Top" 
+                    Width="236"/>
+
+        <TextBlock TextWrapping="Wrap" 
+                    Text="Arrivals" 
+                    Margin="259,70,384,406"
+                    Foreground="White" FontSize="17" 
+                    FontWeight="Bold"/>
+
+        <Rectangle HorizontalAlignment="Left" 
+                    Height="48" Margin="516,58,0,0"
+                    Fill="#A0A0A0"
+                    Stroke="#FFA0A0A0" 
+                    RadiusX="10"
+                    RadiusY="10"
+                    VerticalAlignment="Top" 
+                    Width="236"/>
+
+        <TextBlock TextWrapping="Wrap" 
+                   Text="Departures" 
+                   Margin="535,70,108,406"
+                   Foreground="White" FontSize="17" 
+                   FontWeight="Bold"/>
+
+        <DataGrid x:Name="arrivalsAircraft" 
+          Margin="244,101,320,76"
+          AutoGenerateColumns="False"
+          ItemsSource="{Binding arrivals, UpdateSourceTrigger=PropertyChanged}"
+          Foreground="black"
+          BorderBrush="White">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Time"
+                            MinWidth="70"
+                            Width="*"
+                            Binding="{Binding time}"/>
+
+                <DataGridTextColumn Header="Flight"
+                            MinWidth="70"
+                            Width="*"
+                            Binding="{Binding flight}"/>
+
+                <DataGridTextColumn Header="From"
+                            MinWidth="70"
+                            Width="*"
+                            Binding="{Binding originfrom}"/>
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+        <DataGrid x:Name="departuresAircraft" 
+                  Margin="516,101,48,76"
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding departures, UpdateSourceTrigger=PropertyChanged}"
+                  Foreground="black"
+                  BorderBrush="White">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Time"
+                    MinWidth="70"
+                    Width="*"
+                    Binding="{Binding time}"/>
+
+                <DataGridTextColumn Header="Flight"
+                    MinWidth="70"
+                    Width="*"
+                    Binding="{Binding flight}"/>
+
+                <DataGridTextColumn Header="To"
+                    MinWidth="70"
+                    Width="*"
+                    Binding="{Binding destinationto}"/>
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+
+        <Button Content="+ New Arrival" 
+                Margin="316,438,392,38"
+                Background="#192841"
+                BorderBrush="#192841"
+                Cursor="Hand"
+                Click="newArrival_Click" 
+                Foreground="White"/>
+
+
+        <Button Content="+ New departure" 
+                Margin="583,438,115,38"
+                Background="#192841"
+                BorderBrush="#192841"
+                Cursor="Hand"
+                Foreground="White"
+                Click="newDeparture_Click"/>
+
+    </Grid>
+</Window>

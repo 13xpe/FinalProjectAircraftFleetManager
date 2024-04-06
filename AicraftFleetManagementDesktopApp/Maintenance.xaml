@@ -1,0 +1,264 @@
+﻿<Window x:Class="FinalProjectAircraftFleetManager.Maintenance"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProjectAircraftFleetManager"
+        mc:Ignorable="d"
+        Title="Maintenance" Height="500" Width="800"
+        WindowStyle="none"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="Window_MouseLeftButtonDownDashboard"
+        Background="white"
+        AllowsTransparency="True"
+        Loaded="Maintenance_Loaded">
+
+    <Grid ClipToBounds="True" Name="mainGrid">
+
+        <Button x:Name="buttonCloseDash" Margin="748,0,10,475"
+                Background="#FFFF5D5D" 
+                ContentStringFormat="" 
+                Content="X" 
+                Foreground="White" 
+                BorderBrush="#FFFF5D5D"
+                Click="buttonCloseDashClick" Cursor="Hand"/>
+
+        <Button x:Name="buttonMinimizeDash" Margin="706,0,52,475"
+                Background="#192841" 
+                ContentStringFormat="" 
+                Content="-" 
+                Foreground="White" 
+                BorderBrush="#192841"
+                Click="buttonMinimizeDashClick" Cursor="Hand"/>
+
+        <Border BorderBrush="#FFC7C7C7" BorderThickness="0,0,1,0" Margin="0,0,615,0"/>
+
+        <Image Source="/aviation-removebg-preview.png" 
+       Margin="30,24,649,398"/>
+
+        <Button Content="Dashboard" 
+                Margin="30,130,649,333"
+                Background="Transparent"
+                BorderBrush="#192841"
+                Cursor="Hand"
+                Click="Dashboard_Click"/>
+
+        <Button Content="Aircraft Management" 
+        Margin="30,179,649,284"
+        Background="Transparent"
+        BorderBrush="#192841"
+        Cursor="Hand"
+        Click="buttonAircraftManagSection_Click"/>
+
+        <Button Content="Flight Schedule" 
+        Margin="30,228,649,236"
+        Background="Transparent"
+        BorderBrush="#192841"
+        Cursor="Hand"
+        Click="flightSchedule_Click"/>
+
+        <Button Content="Maintenance" 
+        Margin="30,277,649,186"
+        Background="WhiteSmoke"
+        BorderBrush="#192841"
+        Cursor="Hand"/>
+
+        <Button Content="Aircraft Tracker" 
+        Margin="30,326,649,137"
+        Background="Transparent"
+        BorderBrush="#192841"
+        Cursor="Hand"
+                Click="aircraftTraker_Click"/>
+
+        <Button Content="Alerts" 
+        Margin="30,376,649,87"
+        Background="Transparent"
+        BorderBrush="#192841"
+        Cursor="Hand"
+                Click="alerts_Click"/>
+
+        <Button Content="Log out"
+        Margin="66,457,685,21"
+        Background="Transparent"
+        BorderBrush="White"
+        Cursor="Hand"
+        Click="Logout_Click"/>
+
+        <TextBlock TextWrapping="Wrap" 
+            Text="Maintenance Requests"
+            Foreground="#192841" 
+            FontSize="27" 
+            FontWeight="Bold" 
+            Margin="241,41,233,423"/>
+
+        <TextBlock TextWrapping="Wrap"
+            Text="Older aircrafts must have priority for maintenance requests."
+            Foreground="#192841" 
+            Margin="241,77,110,403"
+            FontSize="13"/>
+
+        <Rectangle HorizontalAlignment="Left" 
+                   Height="90" Margin="241,123,0,0" 
+                   Stroke="#192841"
+                   VerticalAlignment="Top" 
+                    Width="171" Fill="#FF192841"
+                    RadiusX="10"
+                    RadiusY="10"/>
+
+        <TextBlock TextWrapping="Wrap" 
+           Text="Created" 
+           Margin="256,153,474,318"
+           Foreground="White" FontSize="19" 
+           FontWeight="Bold"/>
+
+        <TextBlock TextWrapping="Wrap" 
+           Name="maintenanceCreated"
+            Text="13" 
+            Margin="369,155,393,321"
+            Foreground="White" FontSize="19" 
+            FontWeight="Bold"/>
+
+        <Rectangle HorizontalAlignment="Left" 
+           Height="90" Margin="241,225,0,0" 
+           Stroke="#FFE0BD3F"
+           VerticalAlignment="Top" 
+           Width="171" Fill="#FFE0BD3F"
+           RadiusX="10"
+           RadiusY="10"/>
+
+        <TextBlock TextWrapping="Wrap" 
+                   Text="Pending" 
+                   Margin="256,254,463,217"
+                   Foreground="White" FontSize="19" 
+                   FontWeight="Bold"/>
+
+        <TextBlock TextWrapping="Wrap" 
+                    Name="maintenancePending"
+                    Text="6" 
+                    Margin="369,257,405,219"
+                    Foreground="White" FontSize="19" 
+                    FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.021"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <Rectangle HorizontalAlignment="Left" 
+                    Height="90" Margin="241,327,0,0" 
+                    Stroke="#FF5AA94A"
+                    VerticalAlignment="Top" 
+                    Width="171" Fill="#FF5AA94A"
+                    RadiusX="10"
+                    RadiusY="10"/>
+
+        <TextBlock TextWrapping="Wrap" 
+           Text="In progress" 
+           Margin="256,343,446,99"
+           Foreground="White" FontSize="19" 
+           FontWeight="Bold"/>
+
+        <TextBlock TextWrapping="Wrap" 
+            Name="InProgress"
+            Text="7" 
+            Margin="369,359,405,117"
+            Foreground="White" FontSize="19" 
+            FontWeight="Bold"/>
+
+        <Rectangle HorizontalAlignment="Left" 
+           Height="38" 
+           Margin="453,121,0,0" 
+           Fill="#6A6A6A"
+           Stroke="#6A6A6A" 
+           RadiusX="10"
+           RadiusY="10"
+           VerticalAlignment="Top" 
+           Width="284"/>
+
+        <TextBlock TextWrapping="Wrap" 
+            Text="Maintenance" 
+            Margin="466,125,172,351"
+            Foreground="White" FontSize="15" 
+            FontWeight="Bold"/>
+
+
+        <Rectangle HorizontalAlignment="Left" 
+           Height="107" Margin="453,150,0,0" 
+           Stroke="#ACACAC"
+           Fill="#ACACAC"
+           VerticalAlignment="Top" 
+           Width="284"/>
+
+        <DataGrid x:Name="maintenanceDash"   
+          Margin="453,149,63,243"
+          IsReadOnly="True"
+          AutoGenerateColumns="False"
+          ItemsSource="{Binding maintenance, UpdateSourceTrigger=PropertyChanged}"
+          Foreground="Black"
+          BorderBrush="white">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date"
+                            MinWidth="20"
+                            Width="*"
+                            Binding="{Binding date}"/>
+
+                <DataGridTextColumn Header="Aircraft"
+                            MinWidth="20"
+                            Width="*"
+                            Binding="{Binding aircraft}"/>
+
+                <DataGridTextColumn Header="Problem"
+                            MinWidth="20"
+                            Width="*"
+                            Binding="{Binding problem}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Canvas x:Name="myCanvas" 
+                Background="WhiteSmoke" 
+                Margin="453,279,63,83" />
+
+        <Button Content="+ New Request" 
+        Margin="248,440,454,36"
+        Background="#192841"
+        BorderBrush="#192841"
+        Cursor="Hand"
+        Click="newMaintenanceRequest_Click" 
+        Foreground="White"/>
+
+        <Button Content="+ Checked" 
+                Margin="661,440,63,36"
+                Background="#192841"
+                BorderBrush="#192841"
+                Cursor="Hand"
+                Click="newMaintenanceChecked_Click" 
+                Foreground="White"/>
+
+        <TextBox x:Name="aircraftPendingCodeAlerts" TextWrapping="Wrap" 
+Text="Aircraft code"
+VerticalContentAlignment="Center"
+Background="White"
+Opacity="1" Foreground="#FF9A9A9A" 
+Margin="504,440,193,36"
+GotFocus="TextBox_GotFocus1"/>
+
+        <Button x:Name="searchAircraftPendingAlerts"  Content="Pending"
+VerticalContentAlignment="Center"
+Background="#192841"
+BorderBrush="#192841"
+Opacity="1"
+Foreground="white" Margin="595,440,148,36"
+Click="searchAlertseButton_Click" Cursor="Hand"/>
+
+
+    </Grid>
+
+</Window>

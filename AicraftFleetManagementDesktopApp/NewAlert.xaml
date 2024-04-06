@@ -1,0 +1,102 @@
+﻿<Window x:Class="FinalProjectAircraftFleetManager.NewAlert"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProjectAircraftFleetManager"
+        mc:Ignorable="d"
+        Title="NewAlert" Height="400" Width="700"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="Window_MouseLeftButtonDownDashboard"
+        Background="#192841"
+        AllowsTransparency="True">
+
+    <Grid ClipToBounds="True">
+
+        <TextBlock TextWrapping="Wrap" 
+    Text="New Alert"
+    Foreground="White" 
+    FontSize="20" 
+    FontWeight="Bold" 
+    Margin="43,52,463,320"/>
+
+        <TextBlock TextWrapping="Wrap"
+    Text="Please, insert the correct information for the alert request."
+    Foreground="White" 
+    Margin="43,81,308,299"
+    FontSize="11"/>
+
+        <Image HorizontalAlignment="Left" 
+       Height="51" Margin="564,48,0,0" 
+       VerticalAlignment="Top" 
+       Width="90" 
+       Source="/logoBlueVersion.png"/>
+
+        <ComboBox x:Name="alertGrade" 
+          VerticalContentAlignment="Center"
+          Background="White"
+          Opacity="1" 
+          Foreground="#FF9A9A9A" 
+          Margin="130,150,370,214"
+          SelectionChanged="alertGrade_SelectionChanged">
+
+            <!-- Default item -->
+            <ComboBoxItem Content="Select grade" IsSelected="True" />
+
+            <!-- Other items -->
+            <ComboBoxItem Content="CRIT"/>
+            <ComboBoxItem Content="WARN"/>
+
+        </ComboBox>
+
+        <TextBox x:Name="alertDate" TextWrapping="Wrap" 
+        Text="Report date"
+        VerticalContentAlignment="Center"
+        Background="white"
+        Opacity="1" Foreground="#FF9A9A9A" 
+        Margin="130,200,371,164"
+         GotFocus="TextBox_GotFocus2"/>
+
+        <TextBox x:Name="alertAicraft" TextWrapping="Wrap" 
+                 Text="Aircraft model"
+                 VerticalContentAlignment="Center"
+                 Background="white"
+                 Opacity="1" Foreground="#FF9A9A9A" 
+                 Margin="130,251,370,113"
+                 GotFocus="TextBox_GotFocus3"/>
+
+        <TextBox x:Name="alertSection" TextWrapping="Wrap" 
+                 Text="Aircraft section"
+                 VerticalContentAlignment="Center"
+                 Background="white"
+                 Opacity="1" Foreground="#FF9A9A9A" 
+                 Margin="361,150,139,214"
+                 GotFocus="TextBox_GotFocus4"/>
+
+        <TextBox x:Name="alertMessage" TextWrapping="Wrap" 
+         Text="Alert message"
+         VerticalContentAlignment="Center"
+         Background="white"
+         Opacity="1" Foreground="#FF9A9A9A" 
+         Margin="361,200,139,164"
+         GotFocus="TextBox_GotFocus5"/>
+
+        <Button x:Name="addAlert"  Content="Submit request"
+        VerticalContentAlignment="Center"
+        Background="#FFE2E2E2"
+        Opacity="1"
+        Foreground="#192841" Margin="361,251,139,113"
+        Click="addAlertButton_Click" Cursor="Hand"/>
+
+        <Button x:Name="buttonAlertsClose" Margin="652,0,10,377"
+        Background="#FFFF5D5D" 
+        ContentStringFormat="" 
+        Content="X" 
+        Foreground="White" 
+        BorderBrush="#FFFF5D5D"
+        Click="buttonAlertsClose_Button" Cursor="Hand"/>
+
+    </Grid>
+</Window>

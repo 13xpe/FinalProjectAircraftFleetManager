@@ -1,0 +1,96 @@
+﻿<Window x:Class="FinalProjectAircraftFleetManager.DeleteAircraft"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProjectAircraftFleetManager"
+        mc:Ignorable="d"
+        Title="DeleteAircraft" Height="400" Width="700"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="Window_MouseLeftButtonDownDeleteDelete"   
+        Background="#192841"
+        AllowsTransparency="True">
+
+    <Grid ClipToBounds="True">
+
+        <TextBlock TextWrapping="Wrap" 
+            Text="Delete Aircraft"
+            Foreground="White" 
+            FontSize="20" 
+            FontWeight="Bold" 
+            Margin="44,43,462,329"/>
+
+        <TextBlock TextWrapping="Wrap"
+            Text="Please, make sure you are deleting the right aircraft from the system."
+            Foreground="White" 
+            Margin="44,72,307,308"
+            FontSize="11"/>
+
+        <Image HorizontalAlignment="Left" 
+                Height="51" Margin="565,39,0,0" 
+                VerticalAlignment="Top" 
+                Width="90" 
+                Source="/logoBlueVersion.png"/>
+
+        <TextBox x:Name="deleteAircraftFlight" TextWrapping="Wrap" 
+                  Text="Aircraft ID"
+         VerticalContentAlignment="Center"
+         Background="White"
+         Opacity="1" 
+         Foreground="#FF9A9A9A" 
+         Margin="219,155,217,209"
+         GotFocus="TextBox_GotFocus1"/>
+
+        <Button x:Name="searchAircraftDelete"  Content="Search"
+        VerticalContentAlignment="Center"
+        Background="#FFE2E2E2"
+        Opacity="1"
+        Foreground="#192841" Margin="381,155,217,209"
+        Click="searchDeleteAircraftButton_Click" Cursor="Hand"/>
+
+        <TextBox x:Name="flightGroupDelete" TextWrapping="Wrap" 
+            Text="Aircraft group"
+            VerticalContentAlignment="Center"
+            Background="White"
+            Opacity="1" 
+            Foreground="#FF9A9A9A" 
+            Margin="104,249,445,115"
+            GotFocus="TextBox_GotFocus2"/>
+
+        <TextBox x:Name="aircraftModelDelete" TextWrapping="Wrap" 
+                Text="Aircraft model"
+                VerticalContentAlignment="Center"
+                Background="White"
+                Opacity="1" 
+                Foreground="#FF9A9A9A" 
+                Margin="275,249,273,115"
+                GotFocus="TextBox_GotFocus3"/>
+
+        <TextBox x:Name="aircraftOriginDelete" TextWrapping="Wrap" 
+                 Text="Aircraft origin"
+                VerticalContentAlignment="Center"
+                Background="White"
+                Opacity="1" 
+                Foreground="#FF9A9A9A" 
+                Margin="449,249,99,115"
+                GotFocus="TextBox_GotFocus4"/>
+
+        <Button x:Name="deleteAircraft"  Content="Delete Aircraft"
+                VerticalContentAlignment="Center"
+                Background="#FFE2E2E2"
+                Opacity="1"
+                Foreground="#192841" Margin="244,314,354,50"
+                Click="deleteAircraftButton_Click"
+                Cursor="Hand"/>
+
+        <Button x:Name="backDeleteAircraft"  Content="Back"
+                VerticalContentAlignment="Center"
+                Background="#FFE2E2E2"
+                Opacity="1"
+                Foreground="#192841" Margin="359,314,239,50"
+                Click="backDeleteAircraftButton_Click" Cursor="Hand"/>
+
+    </Grid>
+</Window>

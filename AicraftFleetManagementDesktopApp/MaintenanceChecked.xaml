@@ -1,0 +1,83 @@
+﻿<Window x:Class="FinalProjectAircraftFleetManager.MaintenanceChecked"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProjectAircraftFleetManager"
+        mc:Ignorable="d"
+        Title="MaintenanceChecked" Height="400" Width="700"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseLeftButtonDown="Window_MouseLeftButtonDownDashboard"
+        Background="#192841"
+        AllowsTransparency="True">
+
+    <Grid ClipToBounds="True">
+
+        <TextBlock TextWrapping="Wrap" 
+                   Text="Maintenance Checked"
+                    Foreground="White" 
+                    FontSize="20" 
+                    FontWeight="Bold" 
+                    Margin="43,52,446,320"/>
+
+        <TextBlock TextWrapping="Wrap"
+                    Text="When an aircarft is done being checked and fixed, it's important to let other engineers know it."
+                    Foreground="White" 
+                    Margin="43,81,189,299"
+                    FontSize="11"/>
+
+        <Image HorizontalAlignment="Left" 
+                Height="51" Margin="564,48,0,0" 
+                VerticalAlignment="Top" 
+                Width="90" 
+                Source="/logoBlueVersion.png"/>
+
+        <TextBox x:Name="aircraftCodeChecked" TextWrapping="Wrap" 
+                Text="Aircraft code"
+                VerticalContentAlignment="Center"
+                Background="White"
+                Opacity="1" Foreground="#FF9A9A9A" 
+                Margin="227,165,318,199"
+                GotFocus="TextBox_GotFocus1"/>
+
+        <Button x:Name="searchChecked"  Content="Search"
+                VerticalContentAlignment="Center"
+                Background="#FFE2E2E2"
+                BorderBrush="#FFABADB3"
+                Opacity="1"
+                Foreground="#192841" Margin="382,165,227,199"
+                Click="searchMaintenanceButton_Click" Cursor="Hand"/>
+
+        <TextBox x:Name="ProblemChecked" TextWrapping="Wrap" 
+                Text=""
+                VerticalContentAlignment="Center"
+                Background="White"
+                Opacity="1" Foreground="#FF9A9A9A" 
+                Margin="227,251,227,113"/>
+
+        <TextBlock TextWrapping="Wrap"
+            Text="Confirm the aircraft code and the problem"
+            Foreground="White" 
+            Margin="227,231,227,149"
+            FontSize="11"/>
+
+        <Button x:Name="buttonArrivalClose" Margin="652,0,10,377"
+        Background="#FFFF5D5D" 
+        ContentStringFormat="" 
+        Content="X" 
+        Foreground="White" 
+        BorderBrush="#FFFF5D5D"
+        Click="buttonMaintenanceClose_Button" Cursor="Hand"/>
+
+        <Button x:Name="CheckAircraft"  Content="Check aircraft"
+        VerticalContentAlignment="Center"
+        Background="#FFE2E2E2"
+        BorderBrush="#FFABADB3"
+        Opacity="1"
+        Foreground="#192841" Margin="266,301,266,63"
+        Click="checkMaintenanceButton_Click" Cursor="Hand"/>
+
+    </Grid>
+</Window>
