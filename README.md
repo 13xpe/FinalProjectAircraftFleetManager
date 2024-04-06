@@ -1,6 +1,6 @@
 <h1>Aircraft Fleet Manager</h1>
 
-The main goal is to provide an easy and fast tool that can be helpful when making critical decisions regarding fleet operations and aircraft management. The application aims to manage and optimize the entire aircraft management process, offering a good solution that empowers users to improve resource utilization, ensure regulatory compliance, and boost overall operational efficiency.
+The main goal for this project is to provide an easy and fast desktop app that can be helpful (for aviation professionals like engineers and mechanical technicians) when making critical decisions regarding fleet operations and aircraft management. The application aims to manage and optimize the entire aircraft management process, offering a good solution that empowers users to improve resource utilization, ensure regulatory compliance, and boost overall operational efficiency.
 
 <h3><b>This README file will help explaining and show my work so far on the project</b></h3>
 
